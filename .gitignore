@@ -53,5 +53,5 @@ coverage.xml
 docs/_build/
 
 /.idea
-.DS_Store
+*.DS_Store
 
