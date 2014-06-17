@@ -10,6 +10,12 @@ class ContactView(CreateView):
     exclude = ('id', 'created')
     success_url = '/main/thanks/'
 
+class TrainingView(CreateView):
+    template_name = 'main/training.html'
+    model = Contact
+    exclude = ('id', 'created')
+    success_url = '/main/thanks/'
+
 
 class ContactView1(FormView):
     template_name = 'main/contact.html'
