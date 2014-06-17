@@ -8,6 +8,7 @@ class Contact(models.Model):
     email = models.EmailField(max_length=255)
     intention = models.CharField(max_length=511)
     phone = models.CharField(default='', max_length=15)
+    type = models.CharField(default='', max_length=31)
 
     class Meta:
         db_table = 'contact'
