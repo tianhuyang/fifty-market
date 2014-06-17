@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from  django.views.generic import FormView, TemplateView
+from  django.views.generic import FormView, TemplateView, ListView
 from django.views.generic.edit import CreateView
 from main.forms import ContactForm, Contact
 
@@ -10,6 +10,7 @@ class ContactView(CreateView):
     exclude = ('id', 'created')
     success_url = '/main/thanks/'
 
+
 class TrainingView(CreateView):
     template_name = 'main/training.html'
     model = Contact
@@ -17,10 +18,11 @@ class TrainingView(CreateView):
     success_url = '/main/thanks/'
 
 
-class ContactView1(FormView):
-    template_name = 'main/contact.html'
-    form_class = ContactForm
-    success_url = '/main/thanks/'
+class ContactListView(ListView):
+    paginate_by = 2
+    context_object_name = "contact_list"
+    queryset = Contact.objects.all()
+    template_name = "books/contact_list.html"
 
 
 class ThanksView(TemplateView):
