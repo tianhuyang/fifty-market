@@ -14,13 +14,13 @@
             width:      1440px;
             height:     908px;
             margin:     0px auto;
-            background: rgba(0,0,0,0) url("{% static 'main/img/invite_page_bg_training.jpg' %}") no-repeat 0px 0px;
+            background: rgba(0,0,0,0) url("{% static 'main/img/invite_page_bg_service.jpg' %}") no-repeat 0px 0px;
         }
         .form-container{
             position:   fixed;
             width:      966px;
             height:     596px;
-            background: rgba(0,0,0,0) url("{% static 'main/img/invite_page_form_training.png' %}") no-repeat 0px 0px;
+            background: rgba(0,0,0,0) url("{% static 'main/img/invite_page_form_service.png' %}") no-repeat 0px 0px;
             left:       50%;
             top:        50%;
             margin-left:    -484px;
@@ -105,8 +105,8 @@
                     <input id="id_phone" type="text" name="phone" placeholder="555-555-5555" maxlength="255" value="{{ form.phone.value | default:'' }}">
                 </div>
                 <div class="input-group">
-                    <label for="id_intention">Training Qualifications:<span class="error">{{ form.intention.errors.0 }}</span></label>
-                    <textarea id="id_intention" name="intention" placeholder="Examples include: sports, weight lifting, yoga.">{{ form.intention.value | default:'' }}</textarea>
+                    <label for="id_intention">About Me:<span class="error">{{ form.intention.errors.0 }}</span></label>
+                    <textarea id="id_intention" name="intention" placeholder="Give a Brief Introduction of yourself. (ex: School, Graduation Year, Hobbies), then tell us about what you'll do.">{{ form.intention.value | default:'' }}</textarea>
                 </div>
                 <input type="hidden" name="type" value="training" />
                 <input type="submit" value="Submit" />

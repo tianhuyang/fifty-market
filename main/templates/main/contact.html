@@ -94,7 +94,7 @@
             <form method="post">{% csrf_token %}
                 <div class="input-group">
                     <label for="id_name">Your Name:<span class="error">{{ form.name.errors.0 }}</span></label>
-                    <input id="id_name" type="text" name="name" placeholder="first last" maxlength="63" value="{{ form.name.value | default:'' }}">
+                    <input id="id_name" type="text" name="name" placeholder="First Last" maxlength="63" value="{{ form.name.value | default:'' }}">
                 </div>
                 <div class="input-group">
                     <label for="id_email">Your Email:<span class="error">{{ form.email.errors.0 }}</span></label>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="input-group">
                     <label for="id_intention">Subject you're Qualified to Tutor:<span class="error">{{ form.intention.errors.0 }}</span></label>
-                    <textarea id="id_intention" name="intention" placeholder="examples include: academic subjects as well as art and instrument lessons.">{{ form.intention.value | default:'' }}</textarea>
+                    <textarea id="id_intention" name="intention" placeholder="Examples include: academic subjects as well as art and instrument lessons.">{{ form.intention.value | default:'' }}</textarea>
                 </div>
                 <input type="hidden" name="type" value="tutor" />
                 <input type="submit" value="Submit" />

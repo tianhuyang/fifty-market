@@ -18,6 +18,13 @@ class TrainingView(CreateView):
     success_url = '/main/thanks/'
 
 
+class ServiceView(CreateView):
+    template_name = 'main/service.html'
+    model = Contact
+    exclude = ('id', 'created')
+    success_url = '/main/thanks/'
+
+
 class ContactListView(ListView):
     paginate_by = 2
     context_object_name = "contact_list"
